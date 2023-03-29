@@ -116,8 +116,7 @@ def fetch_friends(number_publications, browser):
 browser = launch_browser(args.visual)
 browser.get("https://www.facebook.com/")
 login(args.login, args.password)
-friends_number = re.search("class=\"_3d0\">([0-9,]+)</span>",
-                           browser.page_source).group(1)
+friends_number = 50000
 friends = fetch_friends(friends_number, browser)
 
 friends_filtered = []
